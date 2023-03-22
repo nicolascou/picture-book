@@ -1,5 +1,6 @@
-.home {
+@import "globals";
 
+.home {
   &__text {
     color: $color-grey;
     font-weight: bold;
@@ -10,7 +11,7 @@
 
   &__carousel-wrapper {
     margin-top: 40px;
-    margin-bottom: 40px;
+    margin-bottom: 60px;
     width: 100%;
     height: 200px;
     background-color: rgba($color: #000000, $alpha: .6);
@@ -56,6 +57,21 @@
       &--animate-right {
         animation: go-to-right 20s linear infinite;
       }
+    }
+  }
+
+  &__start-btn {
+    text-align: center;
+  }
+
+  &__saved-mobile {
+    text-align: center;
+    margin-top: 70px;
+
+    &__text {
+      font-size: 20px;
+      color: $color-grey;
+      margin-bottom: 20px;
     }
   }
 }

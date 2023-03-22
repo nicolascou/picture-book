@@ -6,7 +6,7 @@ const Header: React.FC = () => {
     <header className='header'>
       <h1 className='header__title'>PICTURE BOOK</h1>
       <div className='header__btn'>
-        <Button>MY PHOTOS 📷</Button>
+        <Button className='secondary-btn'>MY PHOTOS 📷</Button>
       </div>
     </header>
   )

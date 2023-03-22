@@ -1,3 +1,41 @@
+.default-btn {
+  background-color: #202355 !important;
+  box-shadow: 2px 4px 4px rgba(0, 0, 0, 0.8) !important;
+  border-radius: 4px !important;
+  color: white !important;
+  padding: 10px 20px !important;
+  font-size: 16px !important;
+  font-family: "Quantico", sans-serif !important;
+}
+
+.secondary-btn {
+  background-color: white !important;
+  border-radius: 30px !important;
+  color: black !important;
+  padding: 10px 20px !important;
+  font-size: 16px !important;
+  font-family: "Quantico", sans-serif !important;
+}
+
+.default-btn {
+  background-color: #202355 !important;
+  box-shadow: 2px 4px 4px rgba(0, 0, 0, 0.8) !important;
+  border-radius: 4px !important;
+  color: white !important;
+  padding: 10px 20px !important;
+  font-size: 16px !important;
+  font-family: "Quantico", sans-serif !important;
+}
+
+.secondary-btn {
+  background-color: white !important;
+  border-radius: 30px !important;
+  color: black !important;
+  padding: 10px 20px !important;
+  font-size: 16px !important;
+  font-family: "Quantico", sans-serif !important;
+}
+
 .header {
   width: 100%;
   padding: 10px 30px;
@@ -23,6 +61,57 @@
     display: block;
   }
 }
+.default-btn {
+  background-color: #202355 !important;
+  box-shadow: 2px 4px 4px rgba(0, 0, 0, 0.8) !important;
+  border-radius: 4px !important;
+  color: white !important;
+  padding: 10px 20px !important;
+  font-size: 16px !important;
+  font-family: "Quantico", sans-serif !important;
+}
+
+.secondary-btn {
+  background-color: white !important;
+  border-radius: 30px !important;
+  color: black !important;
+  padding: 10px 20px !important;
+  font-size: 16px !important;
+  font-family: "Quantico", sans-serif !important;
+}
+
+.footer {
+  background-color: #202355;
+  width: 100%;
+  padding: 10px 0;
+  box-shadow: 0px -4px 4px rgba(0, 0, 0, 0.5);
+  text-align: center;
+  position: absolute;
+  bottom: 0;
+}
+.footer__text {
+  color: white;
+}
+
+.default-btn {
+  background-color: #202355 !important;
+  box-shadow: 2px 4px 4px rgba(0, 0, 0, 0.8) !important;
+  border-radius: 4px !important;
+  color: white !important;
+  padding: 10px 20px !important;
+  font-size: 16px !important;
+  font-family: "Quantico", sans-serif !important;
+}
+
+.secondary-btn {
+  background-color: white !important;
+  border-radius: 30px !important;
+  color: black !important;
+  padding: 10px 20px !important;
+  font-size: 16px !important;
+  font-family: "Quantico", sans-serif !important;
+}
+
 .home__text {
   color: #aaa;
   font-weight: bold;
@@ -32,7 +121,7 @@
 }
 .home__carousel-wrapper {
   margin-top: 40px;
-  margin-bottom: 40px;
+  margin-bottom: 60px;
   width: 100%;
   height: 200px;
   background-color: rgba(0, 0, 0, 0.6);
@@ -73,6 +162,18 @@
 }
 .home__carousel-wrapper__carousel--animate-right {
   animation: go-to-right 20s linear infinite;
+}
+.home__start-btn {
+  text-align: center;
+}
+.home__saved-mobile {
+  text-align: center;
+  margin-top: 70px;
+}
+.home__saved-mobile__text {
+  font-size: 20px;
+  color: #aaa;
+  margin-bottom: 20px;
 }
 
 * {

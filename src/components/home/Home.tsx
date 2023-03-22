@@ -15,12 +15,12 @@ const Home: React.FC = () => {
         <InfiniteCarousel goTo='right' />
 
         <div className='home__start-btn'>
-          <Button>START SEARCHING</Button>
+          <Button className='default-btn'>START SEARCHING</Button>
         </div>
 
         <div className='home__saved-mobile'>
           <p className='home__saved-mobile__text'>OR SEE YOUR SAVED PHOTOS:</p>
-          <Button>MY PHOTOS 📷</Button>
+          <Button className='secondary-btn'>MY PHOTOS 📷</Button>
         </div>
         
       </div>
