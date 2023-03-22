@@ -7,7 +7,7 @@ export interface Photo {
   blur_hash: string;
   likes: number;
   liked_by_user: boolean;
-  description: string | null;
+  description: string;
   user: any;
   current_user_collections: any[];
   urls: {

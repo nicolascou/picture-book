@@ -2,6 +2,8 @@
 
 .search {
   text-align: center;
+  position: relative;
+  min-height: 100vh;
 
   &__form {
     display: flex;
@@ -31,6 +33,21 @@
     font-size: 16px;
     margin-top: 10px;
   }
+
+  &__photos {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 0 20px;
+    padding-bottom: 100px;
+
+    &__image {
+      border-radius: 20px;
+      margin-top: 20px;
+      width: 100%;
+    }
+  }
 }
 
 @media only screen and (min-width: 1000px) {
@@ -42,6 +59,21 @@
     &__form {
       margin-top: 60px;
       max-width: 1000px;
+    }
+
+    &__photos {
+      display: block;
+      margin: 0 40px;
+      margin-top: 20px;
+  
+      &__image {
+        display: inline-block;
+        border-radius: 20px;
+        width: 30%;
+        margin: 10px;
+        vertical-align: top;
+        box-shadow: 0px 8px 8px rgba(0, 0, 0, 0.25);
+      }
     }
   }
 }
