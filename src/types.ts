@@ -3,6 +3,20 @@ export interface Photo {
   created_at: string;
   width: number;
   height: number;
+  likes: number;
+  description: string;
+  urls: {
+    full: string;
+    regular: string;
+    thumb: string;
+  };
+}
+
+export interface UnsplashPhoto {
+  id: string;
+  created_at: string;
+  width: number;
+  height: number;
   color: string;
   blur_hash: string;
   likes: number;
@@ -22,10 +36,4 @@ export interface Photo {
     html: string;
     download: string;
   }
-}
-
-export interface UnsplashResponse {
-  total: number;
-  total_pages: number;
-  results: Photo[];
 }

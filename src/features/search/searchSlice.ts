@@ -1,18 +1,14 @@
 import { createSlice } from '@reduxjs/toolkit'
 import type { PayloadAction } from '@reduxjs/toolkit'
-import { UnsplashResponse } from '../../types';
+import { Photo } from '../../types';
 
 interface SearchState {
-  response: UnsplashResponse;
+  photos: Photo[];
   isLoading: boolean;
 };
 
 const initialState: SearchState = {
-  response: {
-    total: 0,
-    total_pages: 0,
-    results: []
-  },
+  photos: [],
   isLoading: false
 }
 
@@ -23,8 +19,9 @@ export const searchSlice = createSlice({
     startLoadingPhotos: (state) => {
       state.isLoading = true;
     },
-    setPhotos: (state, action: PayloadAction<UnsplashResponse>) => {
-      state.response = action.payload
+    setPhotos: (state, action: PayloadAction<Photo[]>) => {
+      state.photos = action.payload;
+      state.isLoading = false;
     },
   },
 })
