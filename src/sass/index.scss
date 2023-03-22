@@ -1,0 +1,14 @@
+@import "globals";
+@import "header";
+@import "home";
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Quantico', sans-serif;
+}
+
+body {
+  background-color: $secondary-color;
+}
