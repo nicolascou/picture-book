@@ -9,9 +9,10 @@ const img6 = require('../../img/waterfall.jpg');
 
 interface InfiniteCarouselProps {
   goTo: 'left' | 'right';
+  mobileHide?: boolean;
 }
 
-const InfiniteCarousel: React.FC<InfiniteCarouselProps> = ({ goTo }) => {
+const InfiniteCarousel: React.FC<InfiniteCarouselProps> = ({ goTo, mobileHide=false }) => {
   const images = [img1, img2, img3, img4, img5, img6];
   const [imagesLoaded, setImagesLoaded] = useState<boolean>(false);
   const [imageElements, setImageElements] = useState<JSX.Element[]>();
@@ -29,7 +30,7 @@ const InfiniteCarousel: React.FC<InfiniteCarouselProps> = ({ goTo }) => {
   
   
   return (
-    <div className='home__carousel-wrapper'>
+    <div className={`home__carousel-wrapper ${mobileHide ? 'home__carousel-wrapper--hidden' : ''}`}>
       <div className={`home__carousel-wrapper__carousel ${imagesLoaded ? `home__carousel-wrapper__carousel--animate-${goTo}` : ''}`}>
         {
           imageElements && imageElements.map((elt) => elt)

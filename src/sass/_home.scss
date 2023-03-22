@@ -1,7 +1,7 @@
 @import "globals";
 
 .home {
-  &__text {
+  &__text-mobile {
     color: $color-grey;
     font-weight: bold;
     font-size: 18px;
@@ -51,17 +51,25 @@
       }
 
       &--animate-left {
-        animation: go-to-right 20s linear infinite;
+        animation: go-to-left 20s linear infinite;
       }
 
       &--animate-right {
         animation: go-to-right 20s linear infinite;
       }
     }
+
+    &--hidden {
+      display: none;
+    }
   }
 
   &__start-btn {
     text-align: center;
+  }
+
+  &__text-desktop {
+    display: none;
   }
 
   &__saved-mobile {
@@ -72,6 +80,48 @@
       font-size: 20px;
       color: $color-grey;
       margin-bottom: 20px;
+    }
+  }
+}
+
+
+@media only screen and (min-width: 1000px) {
+  .home {
+    display: flex;
+    flex-direction: column;
+    height: calc(100vh - 200px);
+    justify-content: space-around;
+    align-items: center;
+    
+    &__text-mobile {
+      display: none;
+    }
+
+    &__text-desktop {
+      display: block;
+      color: $color-grey;
+      font-weight: bold;
+      font-size: 18px;
+      text-align: center;
+      width: 400px;
+    }
+    
+    &__saved-mobile {
+      display: none;
+    }
+
+    &__carousel-wrapper {
+      &--hidden {
+        display: block;
+      }
+    }
+
+    &__start-btn {
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      margin: 0 100px;
+      margin-bottom: 30px;
     }
   }
 }

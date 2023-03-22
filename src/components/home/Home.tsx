@@ -9,14 +9,18 @@ const Home: React.FC = () => {
     <>
       <Header />
       <div className='home'>
-        <p className='home__text'>OVER +2 MILLION QUALITY PHOTOS</p>
-        <p className='home__text'>ALL PHOTOS ARE FREE TO USE</p>
+        <p className='home__text-mobile'>OVER +2 MILLION QUALITY PHOTOS</p>
+        <p className='home__text-mobile'>ALL PHOTOS ARE FREE TO USE</p>
 
         <InfiniteCarousel goTo='right' />
 
         <div className='home__start-btn'>
+          <p className='home__text-desktop'>OVER +2 MILLION QUALITY PHOTOS</p>
           <Button className='default-btn'>START SEARCHING</Button>
+          <p className='home__text-desktop'>ALL PHOTOS ARE FREE TO USE</p>
         </div>
+
+        <InfiniteCarousel goTo='left' mobileHide={true} />
 
         <div className='home__saved-mobile'>
           <p className='home__saved-mobile__text'>OR SEE YOUR SAVED PHOTOS:</p>
