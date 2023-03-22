@@ -5,6 +5,7 @@ import {
 } from "react-router-dom";
 
 import Home from "./components/home/Home";
+import Search from './components/search/Search';
 
 const router = createBrowserRouter([
   {
@@ -13,7 +14,7 @@ const router = createBrowserRouter([
   },
   {
     path: "search/",
-    element: <div>helloooo</div>
+    element: <Search />
   }
 ]);
 

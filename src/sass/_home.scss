@@ -2,11 +2,15 @@
 
 .home {
   &__text-mobile {
-    color: $color-grey;
-    font-weight: bold;
-    font-size: 18px;
     text-align: center;
-    margin-top: 20px;
+    margin-top: 50px;
+
+    &__text {
+      color: $color-grey;
+      font-weight: bold;
+      font-size: 18px;
+      margin-top: 20px;
+    }
   }
 
   &__carousel-wrapper {
@@ -39,7 +43,7 @@
     &__carousel {
       display: flex;
       align-items: center;
-      width: calc(-320px * 12);
+      width: calc(320px * 12);
       height: 100%;
       margin-left: 10px;
 

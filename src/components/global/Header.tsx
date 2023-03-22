@@ -4,9 +4,9 @@ import { Button } from '@mui/material'
 const Header: React.FC = () => {
   return (
     <header className='header'>
-      <h1 className='header__title'>PICTURE BOOK</h1>
+      <h1 className='header__title'><a href="/">PICTURE BOOK</a></h1>
       <div className='header__btn'>
-        <Button className='secondary-btn'>MY PHOTOS 📷</Button>
+        <Button href='/my-photos/' className='secondary-btn'>MY PHOTOS 📷</Button>
       </div>
     </header>
   )
