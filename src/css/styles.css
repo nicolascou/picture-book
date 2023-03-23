@@ -460,6 +460,34 @@
   border: none;
   cursor: pointer;
 }
+.favorites__modal-wrapper {
+  position: fixed;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: transparent;
+  z-index: 5;
+}
+.favorites__modal {
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  flex-direction: column;
+  border: 2px solid white;
+  background-color: #2E3264;
+  width: 80%;
+  z-index: 10;
+}
+.favorites__modal__cross {
+  position: absolute;
+  top: 5px;
+  right: 5px;
+}
+.favorites__modal--hidden {
+  display: block;
+}
 
 @media only screen and (min-width: 1000px) {
   .favorites__btn-mobile {

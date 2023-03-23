@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react'
+import React, { useEffect, useState } from 'react'
 import { useAppDispatch, useAppSelector } from '../../app/hooks';
 import { loadLikedPhotos } from '../../features/favorites/favoriteSlice';
 import Header from '../global/Header';
@@ -6,10 +6,17 @@ import { Button } from '@mui/material';
 import Footer from '../global/Footer';
 import FilterLikedPhotos from './FilterLikedPhotos';
 import LikedPhotoIcons from './LikedPhotoIcons';
+import { LikedPhoto } from '../../types';
+import ModalWindow from './ModalWindow';
 
 const Favorites: React.FC = () => {
+  const [editPhoto, setEditPhoto] = useState<LikedPhoto>();
   const dispatch = useAppDispatch();
   const { likedPhotos } = useAppSelector(state => state.favoriteReducer);
+
+  const openModal = (photo: LikedPhoto) => {
+    setEditPhoto(photo)
+  }
 
   useEffect(() => {
     dispatch( loadLikedPhotos() );
@@ -24,6 +31,8 @@ const Favorites: React.FC = () => {
 
       <FilterLikedPhotos />
 
+      <ModalWindow photo={editPhoto} />
+
       <div className='favorites__photos'>
         {
           likedPhotos &&
@@ -31,7 +40,7 @@ const Favorites: React.FC = () => {
             <div style={{ position: 'relative' }} key={id}>
               <img src={urls.regular} 
                 className='favorites__photos__image' alt={id} />
-              <LikedPhotoIcons photoId={id} />
+              <LikedPhotoIcons photoId={id} openModal={openModal} />
             </div>
           ))
         }
