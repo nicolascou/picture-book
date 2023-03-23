@@ -64,7 +64,7 @@
     align-items: center;
     margin: 0 20px;
     padding-bottom: 100px;
-    margin-top: 30px;
+    margin-top: 20px;
 
     &__image {
       border-radius: 20px;
@@ -125,16 +125,54 @@
     border: 2px solid white;
     background-color: $tertiary-color;
     width: 80%;
+    border-radius: 20px;
     z-index: 10;
+    padding: 40px;
+
+    &__title {
+      font-size: 36px;
+      color: white;
+      margin-bottom: 10px;
+    }
+
+    &__edit {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      
+      &__input {
+        border: none;
+        border-radius: 10px;
+        padding: 10px 15px;
+        outline: none;
+        width: 80%;
+        margin-top: 5px;
+        margin-bottom: 15px;
+      }
+    }
+
+    &__props {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      margin-top: 40px;
+
+      &__text {
+        font-size: 18px;
+        color: $color-grey;
+        margin-bottom: 10px;
+      }
+    }
 
     &__cross {
       position: absolute;
-      top: 5px;
-      right: 5px;
-    }
-
-    &--hidden {
-      display: block;
+      top: 10px;
+      right: 10px;
+      background-color: transparent;
+      border: none;
+      cursor: pointer;
     }
   }
 }
@@ -175,6 +213,23 @@
         margin: 0;
         margin-left: 5vw;
         flex-wrap: nowrap;
+      }
+    }
+
+    &__modal {
+      flex-direction: row;
+      align-items: flex-start;
+      justify-content: space-around;
+      width: 60%;
+      padding: 50px 20px;
+      
+      &__props {
+        margin-top: 0;
+      }
+
+      &__cross {
+        top: 20px;
+        right: 20px;
       }
     }
   }

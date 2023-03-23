@@ -14,9 +14,8 @@ const Favorites: React.FC = () => {
   const dispatch = useAppDispatch();
   const { likedPhotos } = useAppSelector(state => state.favoriteReducer);
 
-  const openModal = (photo: LikedPhoto) => {
-    setEditPhoto(photo)
-  }
+  const openModal = (photo: LikedPhoto) => setEditPhoto(photo);
+  const closeModal = () => setEditPhoto(undefined);
 
   useEffect(() => {
     dispatch( loadLikedPhotos() );
@@ -31,7 +30,7 @@ const Favorites: React.FC = () => {
 
       <FilterLikedPhotos />
 
-      <ModalWindow photo={editPhoto} />
+      <ModalWindow photo={editPhoto} closeModal={closeModal} />
 
       <div className='favorites__photos'>
         {
