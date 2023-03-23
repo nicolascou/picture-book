@@ -18,7 +18,7 @@ const Home: React.FC = () => {
 
         <div className='home__start-btn'>
           <p className='home__text-desktop'>OVER +2 MILLION QUALITY PHOTOS</p>
-          <Button href='search/' className='default-btn'>START SEARCHING</Button>
+          <Button href='/picture-book/search/' className='default-btn'>START SEARCHING</Button>
           <p className='home__text-desktop'>ALL PHOTOS ARE FREE TO USE</p>
         </div>
 
@@ -26,7 +26,7 @@ const Home: React.FC = () => {
 
         <div className='home__saved-mobile'>
           <p className='home__saved-mobile__text'>OR SEE YOUR SAVED PHOTOS:</p>
-          <Button href='/my-photos' className='secondary-btn'>MY PHOTOS 📷</Button>
+          <Button href='/picture-book/my-photos' className='secondary-btn'>MY PHOTOS 📷</Button>
         </div>
         
       </div>

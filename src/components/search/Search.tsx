@@ -30,7 +30,7 @@ const Search: React.FC = () => {
     <div className='search'>
       <Header />
       <div className='search__btn-mobile'>
-        <Button href='/my-photos' className='secondary-btn'>MY PHOTOS 📷</Button>
+        <Button href='/picture-book/my-photos' className='secondary-btn'>MY PHOTOS 📷</Button>
       </div>
 
       <form onSubmit={(e) => handleSubmit(e)} className='search__form'>

@@ -10,15 +10,15 @@ import Favorites from './components/favs/Favorites';
 
 const router = createBrowserRouter([
   {
-    path: "/",
+    path: "picture-book/",
     element: <Home />,
   },
   {
-    path: "search/",
+    path: "picture-book/search",
     element: <Search />
   },
   {
-    path: "my-photos/",
+    path: "picture-book/my-photos",
     element: <Favorites />
   }
 ]);

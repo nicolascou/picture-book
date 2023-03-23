@@ -25,7 +25,7 @@ const Favorites: React.FC = () => {
     <div className='favorites'>
       <Header inFavorites={true} />
       <div className='favorites__btn-mobile'>
-        <Button href='/search' className='secondary-btn'>GO BACK TO SEARCH 🔎</Button>
+        <Button href='/picture-book/search' className='secondary-btn'>GO BACK TO SEARCH 🔎</Button>
       </div>
 
       <FilterLikedPhotos />
