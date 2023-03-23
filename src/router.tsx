@@ -6,6 +6,7 @@ import {
 
 import Home from "./components/home/Home";
 import Search from './components/search/Search';
+import Favorites from './components/favs/Favorites';
 
 const router = createBrowserRouter([
   {
@@ -15,6 +16,10 @@ const router = createBrowserRouter([
   {
     path: "search/",
     element: <Search />
+  },
+  {
+    path: "my-photos/",
+    element: <Favorites />
   }
 ]);
 

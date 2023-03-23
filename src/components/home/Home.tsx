@@ -26,7 +26,7 @@ const Home: React.FC = () => {
 
         <div className='home__saved-mobile'>
           <p className='home__saved-mobile__text'>OR SEE YOUR SAVED PHOTOS:</p>
-          <Button className='secondary-btn'>MY PHOTOS 📷</Button>
+          <Button href='/my-photos' className='secondary-btn'>MY PHOTOS 📷</Button>
         </div>
         
       </div>

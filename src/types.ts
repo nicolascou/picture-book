@@ -1,15 +1,18 @@
 export interface Photo {
   id: string;
-  created_at: string;
   width: number;
   height: number;
   likes: number;
-  description: string;
+  description: string | null;
   urls: {
     full: string;
     regular: string;
     thumb: string;
   };
+}
+
+export interface LikedPhoto extends Photo {
+  date_added: Date;
 }
 
 export interface UnsplashPhoto {

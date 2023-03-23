@@ -9,20 +9,23 @@ export const getPhotos = createAsyncThunk(
     thunkAPI.dispatch(startLoadingPhotos());
     const resp = await unsplashApi.get(endpoint);
 
-    const photos: Photo[] = resp.data.results.map((photo: UnsplashPhoto) => ({
-        id: photo.id,
-        created_at: photo.created_at,
-        width: photo.width,
-        height: photo.height,
-        likes: photo.likes,
-        description: photo.description,
-        urls: {
-          full: photo.urls.full,
-          regular: photo.urls.regular,
-          thumb: photo.urls.thumb
-        }
-    }))
+    if (endpoint === 'photos/random?count=10') {
+      thunkAPI.dispatch(setPhotos(resp.data));
+    } else {
+      const photos: Photo[] = resp.data.results.map((photo: UnsplashPhoto) => ({
+          id: photo.id,
+          width: photo.width,
+          height: photo.height,
+          likes: photo.likes,
+          description: photo.description,
+          urls: {
+            full: photo.urls.full,
+            regular: photo.urls.regular,
+            thumb: photo.urls.thumb
+          }
+      }))
 
-    thunkAPI.dispatch(setPhotos(photos));
+      thunkAPI.dispatch(setPhotos(photos));
+    }
   }
 )

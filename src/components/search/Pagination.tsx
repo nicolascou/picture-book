@@ -12,13 +12,19 @@ const Pagination: React.FC<PaginationProps> = ({ query }) => {
   const dispatch = useAppDispatch();
   
   const getPhotosByPage = (num: number) => {
+    if (query.length === 0) {
+      dispatch( getPhotos('photos/random?count=10') )
+    }
+    dispatch( getPhotos(`search/photos?page=${num}&query=${query}`) );
     setPage(num);
-    dispatch( getPhotos(`search/photos?page=${page}&query=${query}`) );
   }
 
   const passPage = (num: number) => {
+    if (query.length === 0) {
+      dispatch( getPhotos('photos/random?count=10') )
+    }
+    dispatch( getPhotos(`search/photos?page=${page+num}&query=${query}`) );
     setPage(page + num);
-    dispatch( getPhotos(`search/photos?page=${page}&query=${query}`) );
   }
   
   return (

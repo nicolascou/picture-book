@@ -5,6 +5,7 @@ import Footer from '../global/Footer';
 import { getPhotos } from '../../features/search/thunk';
 import { useAppDispatch, useAppSelector } from '../../app/hooks';
 import Pagination from './Pagination';
+import HeartIcon from './HeartIcon';
 
 const Search: React.FC = () => {
   const [query, setQuery] = useState('');
@@ -15,7 +16,7 @@ const Search: React.FC = () => {
   const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
     if (query.length === 0) {
-      dispatch(getPhotos(`photos/random`));
+      dispatch(getPhotos(`photos/random?count=10`));
     } else {
       dispatch(getPhotos(`search/photos?page=1&query=${query}`));
     }
@@ -29,7 +30,7 @@ const Search: React.FC = () => {
     <div className='search'>
       <Header />
       <div className='search__btn-mobile'>
-        <Button className='secondary-btn'>MY PHOTOS 📷</Button>
+        <Button href='/my-photos' className='secondary-btn'>MY PHOTOS 📷</Button>
       </div>
 
       <form onSubmit={(e) => handleSubmit(e)} className='search__form'>
@@ -49,9 +50,12 @@ const Search: React.FC = () => {
       <div className='search__photos'>
         {
           photos &&
-          photos.map(({ id, urls, description }) => (
-            <img key={id} src={urls.regular} 
-              className='search__photos__image' alt={description} />
+          photos.map(({ id, urls }) => (
+            <div style={{ position: 'relative' }} key={id}>
+              <img src={urls.regular} 
+                className='search__photos__image' alt={id} />
+              <HeartIcon photoId={id} />
+            </div>
           ))
         }
       </div>
