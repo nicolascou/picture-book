@@ -460,6 +460,19 @@
   border: none;
   cursor: pointer;
 }
+.favorites__no-photos {
+  text-align: center;
+}
+.favorites__no-photos__title {
+  font-size: 36px;
+  color: white;
+  text-transform: uppercase;
+}
+.favorites__no-photos__text {
+  text-transform: uppercase;
+  margin-top: 20px;
+  color: #aaa;
+}
 .favorites__modal-wrapper {
   position: fixed;
   top: 0;

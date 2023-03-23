@@ -104,6 +104,23 @@
       border: none;
       cursor: pointer;
     }
+
+  }
+
+  &__no-photos {
+    text-align: center;
+    
+    &__title {
+      font-size: 36px;
+      color: white;
+      text-transform: uppercase;
+    }
+
+    &__text {
+      text-transform: uppercase;
+      margin-top: 20px;
+      color: $color-grey;
+    }
   }
 
   &__modal-wrapper {

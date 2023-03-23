@@ -20,28 +20,27 @@ const LikedPhotoIcons: React.FC<LikedPhotoIconsProps> = ({ photoId, openModal })
   }
 
   const downloadPhoto = () => {
-    likedPhotos.map((photo) => {
-      if (photo.id === photoId) {
-        fetch(photo.urls.full)
-        .then((response) => response.blob())
-        .then((blob) => {
-          const url = window.URL.createObjectURL(blob);
-          const downloadLink = document.createElement("a");
-          downloadLink.href = url;
-          downloadLink.download = photo.description || photo.id;
-          downloadLink.click();
-          window.URL.revokeObjectURL(url);
-        });
-      }
-    })
+    const photo = likedPhotos.find((photo) => photo.id === photoId);
+    photo &&
+    fetch(photo.urls.full)
+    .then((response) => response.blob())
+    .then((blob) => {
+      const url = window.URL.createObjectURL(blob);
+      const downloadLink = document.createElement("a");
+      downloadLink.href = url;
+      downloadLink.download = photo.description || photo.id;
+      downloadLink.click();
+      window.URL.revokeObjectURL(url);
+    });
   }
 
   const editPhoto = () => {
-    likedPhotos.map((photo) => {
-      if (photo.id === photoId) {
-        openModal(photo);
+    for (let i = 0; i < likedPhotos.length; i++ ) {
+      if (likedPhotos[i].id === photoId) {
+        openModal(likedPhotos[i]);
+        break;
       }
-    })
+    }
   }
   
   return (

@@ -19,7 +19,7 @@ const Favorites: React.FC = () => {
 
   useEffect(() => {
     dispatch( loadLikedPhotos() );
-  }, []);
+  }, [dispatch]);
   
   return (
     <div className='favorites'>
@@ -44,6 +44,13 @@ const Favorites: React.FC = () => {
           ))
         }
       </div>
+      {
+        likedPhotos.length === 0 &&
+        <div className='favorites__no-photos'>
+          <h2 className='favorites__no-photos__title'>you have no liked photos 😓</h2>
+          <p className='favorites__no-photos__text'>go back to search to start adding photos</p>
+        </div>
+      }
       
       <div style={{ height: '50px' }}></div>
       <Footer />
