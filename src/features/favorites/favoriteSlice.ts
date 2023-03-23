@@ -1,5 +1,5 @@
 import { createSlice, PayloadAction } from '@reduxjs/toolkit'
-import { LikedPhoto, Photo } from '../../types';
+import { LikedPhoto } from '../../types';
 
 interface FavoriteState {
   likedPhotos: LikedPhoto[];

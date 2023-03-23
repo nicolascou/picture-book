@@ -1,5 +1,6 @@
 {
   "name": "picture-book",
+  "homepage": "https://nicolascou.github.io/picture-book",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -28,7 +29,9 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "scss": "sass --watch src/sass/index.scss src/css/styles.css"
+    "scss": "sass --watch src/sass/index.scss src/css/styles.css",
+    "predeploy" : "npm run build",
+    "deploy" : "gh-pages -d build"
   },
   "eslintConfig": {
     "extends": [
@@ -49,6 +52,7 @@
     ]
   },
   "devDependencies": {
+    "gh-pages": "^5.0.0",
     "sass": "^1.59.3"
   }
 }
