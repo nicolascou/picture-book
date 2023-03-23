@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from 'react'
 import { LikedPhoto } from '../../types';
 import { Button } from '@mui/material';
+import { useAppDispatch } from '../../app/hooks';
+import { loadLikedPhotos } from '../../features/favorites/favoriteSlice';
 
 interface ModalWindowProps {
   photo?: LikedPhoto;
@@ -9,10 +11,26 @@ interface ModalWindowProps {
 
 const ModalWindow: React.FC<ModalWindowProps> = ({ photo, closeModal }) => {
   const [description, setDescription] = useState('');
+  const dispatch = useAppDispatch();
 
   useEffect(() => {
     setDescription(photo?.description || '');
   }, [photo])
+
+  const changeDescription = () => {
+    if (photo) {
+      let localPhotos: any[] = JSON.parse(localStorage.getItem('picture-book') || '[]');
+      localPhotos = localPhotos.map((likedPhoto) => {
+        if (likedPhoto.id === photo.id) {
+          likedPhoto.description = description;
+        }
+        return likedPhoto
+      });
+      localStorage.setItem('picture-book', JSON.stringify(localPhotos));
+      closeModal();
+      dispatch( loadLikedPhotos() );
+    }
+  }
   
   return (
     <>
@@ -29,7 +47,7 @@ const ModalWindow: React.FC<ModalWindowProps> = ({ photo, closeModal }) => {
               <h3 className='favorites__modal__title'>EDIT DESCRIPTION</h3>
               <textarea className='favorites__modal__edit__input'
               value={description} onChange={(e) => setDescription(e.target.value)} />
-              <Button className='secondary-btn'>SAVE</Button>
+              <Button className='secondary-btn' onClick={changeDescription} >SAVE</Button>
             </div>
             <div className='favorites__modal__props'>
               <h3 className='favorites__modal__title'>PROPERTIES</h3>
