@@ -47,8 +47,8 @@ const Favorites: React.FC = () => {
       {
         likedPhotos.length === 0 &&
         <div className='favorites__no-photos'>
-          <h2 className='favorites__no-photos__title'>you have no liked photos 😓</h2>
-          <p className='favorites__no-photos__text'>go back to search to start adding photos</p>
+          <h2 className='favorites__no-photos__title'>no photos found 😓</h2>
+          <p className='favorites__no-photos__text'>go back to search to add photos</p>
         </div>
       }
       

@@ -25,3 +25,9 @@ $color-grey: #aaa;
   font-family: 'Quantico', sans-serif !important;
 }
 
+
+@media only screen and (max-width: 450px) {
+  .small-hidden {
+    display: none;
+  }
+}

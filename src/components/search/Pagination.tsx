@@ -23,6 +23,7 @@ const Pagination: React.FC<PaginationProps> = ({ query }) => {
     if (query.length === 0) {
       dispatch( getPhotos('photos/random?count=10') )
     }
+    if (page + num <= 0) return;
     dispatch( getPhotos(`search/photos?page=${page+num}&query=${query}`) );
     setPage(page + num);
   }
@@ -32,13 +33,13 @@ const Pagination: React.FC<PaginationProps> = ({ query }) => {
       <div className='search__pagination__btn'>
         <Button onClick={() => passPage(-1)} className='secondary-btn'>&#60;---</Button>
       </div>
-      <div className='search__pagination__btn'>
+      <div className='search__pagination__btn small-hidden'>
         <Button onClick={() => getPhotosByPage(1)} className='secondary-btn'>1</Button>
       </div>
-      <div className='search__pagination__btn'>
+      <div className='search__pagination__btn small-hidden'>
         <Button onClick={() => getPhotosByPage(2)} className='secondary-btn'>2</Button>
       </div>
-      <div className='search__pagination__btn'>
+      <div className='search__pagination__btn small-hidden'>
         <Button onClick={() => getPhotosByPage(3)} className='secondary-btn'>3</Button>
       </div>
       <div className='search__pagination__btn'>

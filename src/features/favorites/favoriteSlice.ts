@@ -17,7 +17,8 @@ export const favoriteSlice = createSlice({
       state.likedPhotos = JSON.parse(localStorage.getItem('picture-book') || '[]');
     },
     searchByDescription: (state, action: PayloadAction<string>) => {
-      state.likedPhotos = state.likedPhotos.filter(({ description }) => {
+      const localPhotos: LikedPhoto[] = JSON.parse(localStorage.getItem('picture-book') || '[]');
+      state.likedPhotos = localPhotos.filter(({ description }) => {
         if (description) {
           return description.toLowerCase().includes(action.payload);
         }
