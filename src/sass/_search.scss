@@ -3,7 +3,7 @@
 .search {
   text-align: center;
   position: relative;
-  min-height: 100vh;
+  min-height: calc(100vh - 160px);
 
   &__form {
     display: flex;
@@ -92,6 +92,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    margin-bottom: 50px;
 
     &__btn {
       margin: 0 10px;

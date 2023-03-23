@@ -1,6 +1,8 @@
 @import "globals";
 
 .home {
+  min-height: calc(100vh - 140px);
+
   &__text-mobile {
     text-align: center;
     margin-top: 50px;
@@ -93,8 +95,6 @@
   .home {
     display: flex;
     flex-direction: column;
-    height: calc(100vh - 200px);
-    justify-content: space-around;
     align-items: center;
     
     &__text-mobile {
@@ -126,8 +126,7 @@
       display: flex;
       justify-content: space-around;
       align-items: center;
-      margin: 0 100px;
-      margin-bottom: 30px;
+      margin: 60px 100px;
     }
   }
 }
