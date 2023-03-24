@@ -37,7 +37,7 @@ const Favorites: React.FC = () => {
           {
             likedPhotos &&
             likedPhotos.map(({ id, urls }) => (
-              <div style={{ position: 'relative' }} key={id}>
+              <div key={id} className='favorites__photos__image-wrapper'>
                 <img src={urls.regular} 
                   className='favorites__photos__image' alt={id} />
                 <LikedPhotoIcons photoId={id} openModal={openModal} />

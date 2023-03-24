@@ -57,7 +57,7 @@ const Search: React.FC = () => {
           {
             photos &&
             photos.map(({ id, urls }) => (
-              <div style={{ position: 'relative' }} key={id}>
+              <div className='search__photos__image-wrapper' key={id}>
                 <img src={urls.regular} 
                   className='search__photos__image' alt={id} />
                 <HeartIcon photoId={id} />

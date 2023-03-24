@@ -9,7 +9,6 @@ const FilterLikedPhotos: React.FC = () => {
 
   useEffect(() => {
     if (search.length > 0) {
-      console.log(search)
       dispatch( searchByDescription(search.toLowerCase()) );
     } else {
       dispatch( loadLikedPhotos() );
