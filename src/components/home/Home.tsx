@@ -7,7 +7,7 @@ import InfiniteCarousel from './InfiniteCarousel';
 const Home: React.FC = () => {
   return (
     <>
-      <Header inHome={true} />
+      <Header />
       <div className='home'>
         <div className='home__text-mobile'>
           <p className='home__text-mobile__text'>OVER +2 MILLION QUALITY PHOTOS</p>
