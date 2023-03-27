@@ -32,6 +32,7 @@ const HeartIcon: React.FC<HeartIconProps> = ({ photoId }) => {
   useEffect(() => {
     let localPhotos = JSON.parse(localStorage.getItem('picture-book') || '[]');
     setLiked(localPhotos.some((photo: LikedPhoto) => photo.id === photoId));
+    // eslint-disable-next-line
   }, []);
   
   return (

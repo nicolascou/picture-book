@@ -700,4 +700,21 @@ body {
   background-color: #252850;
 }
 
+.returnToTop {
+  position: fixed;
+  bottom: 20px;
+  z-index: 8;
+  right: 20px;
+  background-color: white;
+  padding: 10px 12px;
+  border-radius: 50%;
+  border: none;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+.returnToTop--hidden {
+  display: none;
+}
+
 /*# sourceMappingURL=styles.css.map */
