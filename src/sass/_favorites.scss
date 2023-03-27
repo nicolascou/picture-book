@@ -76,37 +76,44 @@
       width: 100%;
     }
 
-    &__trash {
+    &__icon {
       position: absolute;
-      bottom: 10px;
-      left: 10px;
       background-color: $secondary-color;
       border-radius: 50%;
-      padding: 10px 12px;
+      padding: 12px;
       border: none;
       cursor: pointer;
+      display: flex;
+      align-items: center;
+
+      &--hidden {
+        display: none;
+      }
+    }
+
+    &__trash {
+      bottom: 10px;
+      left: 10px;
     }
 
     &__download {
-      position: absolute;
       bottom: 10px;
       right: 10px;
-      background-color: $secondary-color;
-      border-radius: 50%;
-      padding: 10px 12px;
-      border: none;
-      cursor: pointer;
     }
 
     &__edit {
-      position: absolute;
       bottom: 70px;
       right: 10px;
-      background-color: $secondary-color;
-      border-radius: 50%;
-      padding: 10px 12px;
-      border: none;
-      cursor: pointer;
+    }
+
+    &__tick {
+      bottom: 10px;
+      left: 10px;
+    }
+
+    &__cross {
+      bottom: 10px;
+      left: 70px;
     }
 
   }

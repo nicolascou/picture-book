@@ -353,6 +353,15 @@
 .search__pagination__btn {
   margin: 0 10px;
 }
+.search__pagination-page {
+  color: white;
+  font-weight: bold;
+  margin: 20px auto;
+  padding: 8px 15px;
+  border: 1px solid white;
+  width: fit-content;
+  border-radius: 50%;
+}
 
 @media only screen and (min-width: 1000px) {
   .search__btn-mobile {
@@ -471,35 +480,38 @@
   margin-top: 20px;
   width: 100%;
 }
-.favorites__photos__trash {
+.favorites__photos__icon {
   position: absolute;
+  background-color: #252850;
+  border-radius: 50%;
+  padding: 12px;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+}
+.favorites__photos__icon--hidden {
+  display: none;
+}
+.favorites__photos__trash {
   bottom: 10px;
   left: 10px;
-  background-color: #252850;
-  border-radius: 50%;
-  padding: 10px 12px;
-  border: none;
-  cursor: pointer;
 }
 .favorites__photos__download {
-  position: absolute;
   bottom: 10px;
   right: 10px;
-  background-color: #252850;
-  border-radius: 50%;
-  padding: 10px 12px;
-  border: none;
-  cursor: pointer;
 }
 .favorites__photos__edit {
-  position: absolute;
   bottom: 70px;
   right: 10px;
-  background-color: #252850;
-  border-radius: 50%;
-  padding: 10px 12px;
-  border: none;
-  cursor: pointer;
+}
+.favorites__photos__tick {
+  bottom: 10px;
+  left: 10px;
+}
+.favorites__photos__cross {
+  bottom: 10px;
+  left: 70px;
 }
 .favorites__no-photos {
   text-align: center;
