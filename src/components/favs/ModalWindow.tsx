@@ -54,7 +54,7 @@ const ModalWindow: React.FC<ModalWindowProps> = ({ photo, closeModal }) => {
               <p className='favorites__modal__props__text'>WIDTH: {photo.width}</p>
               <p className='favorites__modal__props__text'>HEIGHT: {photo.height}</p>
               <p className='favorites__modal__props__text'>LIKES: {photo.likes}</p>
-              <p className='favorites__modal__props__text'>DATE ADDED: {new Date(photo.date_added).toISOString().split('T')[0]}</p>
+              <p className='favorites__modal__props__text'>DATE ADDED: {new Date(photo.date_added).toLocaleDateString()}</p>
             </div>
           </div>
         </div>
