@@ -2,14 +2,15 @@ import React from 'react'
 import { Button } from '@mui/material'
 
 interface HeaderProps {
+  inHome?: Boolean;
   inFavorites?: boolean;
 }
 
-const Header: React.FC<HeaderProps> = ({ inFavorites=false }) => {
+const Header: React.FC<HeaderProps> = ({ inFavorites=false, inHome=false }) => {
   return (
     <header className='header'>
       <h1 className='header__title'><a href="/picture-book/">PICTURE BOOK</a></h1>
-      <div className='header__btn'>
+      <div className={`header__btn ${inHome ? '' : 'header__btn--fixed'}`}>
         <Button href={inFavorites ? '/picture-book/search/' : '/picture-book/my-photos/'} 
         className='secondary-btn'>{inFavorites ? 'GO BACK TO SEARCH 🔎':  'MY PHOTOS 📷'}</Button>
       </div>

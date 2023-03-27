@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import { useAppSelector } from '../../app/hooks';
 import { LikedPhoto } from '../../types';
 
@@ -28,6 +28,11 @@ const HeartIcon: React.FC<HeartIconProps> = ({ photoId }) => {
     localStorage.setItem('picture-book', JSON.stringify(array));
     setLiked(!liked);
   }
+
+  useEffect(() => {
+    let localPhotos = JSON.parse(localStorage.getItem('picture-book') || '[]');
+    setLiked(localPhotos.some((photo: LikedPhoto) => photo.id === photoId));
+  }, []);
   
   return (
     <button className='search__photos__heart' onClick={handleLike}>

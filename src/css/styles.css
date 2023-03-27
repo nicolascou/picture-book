@@ -68,6 +68,12 @@
   position: absolute;
   right: 30px;
 }
+.header__btn--fixed {
+  position: fixed;
+  border: 1px solid black;
+  border-radius: 30px;
+  z-index: 5;
+}
 
 @media only screen and (min-width: 1000px) {
   .header__btn {
@@ -272,6 +278,9 @@
   min-height: calc(100vh - 160px);
 }
 .search__form {
+  position: sticky;
+  top: 10px;
+  z-index: 3;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -279,6 +288,8 @@
   width: 80%;
   margin: 0 auto;
   margin-top: 20px;
+  box-shadow: 2px 4px 15px #000;
+  border-radius: 10px;
 }
 .search__form__input {
   height: 100%;
@@ -357,6 +368,7 @@
   color: white;
   font-weight: bold;
   margin: 20px auto;
+  margin-top: 0;
   padding: 8px 15px;
   border: 1px solid white;
   width: fit-content;
@@ -423,7 +435,18 @@
   justify-content: space-around;
   align-items: center;
 }
+.favorites__filter-mobile {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+}
 .favorites__filter {
+  position: sticky;
+  top: 5px;
+  z-index: 2;
+  background-color: #252850;
+  padding: 10px;
+  border-radius: 20px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -458,6 +481,16 @@
 }
 .favorites__filter__order button {
   margin: 5px;
+}
+.favorites__filter__order--hidden {
+  display: none;
+}
+.favorites__filter__hamburger {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  display: inline-block;
+  margin-left: 20px;
 }
 .favorites__text {
   color: #aaa;
@@ -619,6 +652,8 @@
     margin-top: 0;
   }
   .favorites__filter {
+    border-radius: 20px;
+    background-color: transparent;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
@@ -626,11 +661,24 @@
   }
   .favorites__filter__input {
     margin: 0;
+    border: 5px solid #252850;
+    border-radius: 20px;
   }
   .favorites__filter__order {
+    display: block;
     margin: 0;
+    background-color: #252850;
+    border-radius: 20px;
+    border: 1px solid white;
+    padding: 5px 0;
     margin-left: 5vw;
     flex-wrap: nowrap;
+  }
+  .favorites__filter__order__text {
+    margin-bottom: 5px;
+  }
+  .favorites__filter__hamburger {
+    display: none;
   }
   .favorites__modal {
     flex-direction: row;
