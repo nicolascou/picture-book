@@ -25,7 +25,6 @@ const Favorites: React.FC = () => {
 
   const handleNavigation = () => {
     if (window.scrollY > 400) {
-      console.log('ho')
       setShowTopButton(true);
     } else {
       setShowTopButton(false);
