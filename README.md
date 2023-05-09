@@ -1,3 +1,6 @@
-# Photos App
-
-An application, built in react, in which you can search, save and download photos requested to the Unsplash API.
+# Picture Book
+[Picture Book](https://nicolascou.github.io/picture-book/) is an application for searching, downloading and saving photos from Unsplash API.
+- CRUD Application
+- Built in react
+- Use of redux-toolkit and react-router
+- Styles with SASS, using BEM
